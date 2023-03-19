@@ -22,7 +22,7 @@ public class Angles {
         // Write a print statement that print if it is circle.
         System.out.println("It is a circle: " + (total == 360));
 
-        System.out.println("It is either trianle or circle: " + (total == 180 || total == 360));
+        System.out.println("It is either triangle or circle: " + (total == 180 || total == 360));
 
 
 
