@@ -2,7 +2,7 @@ package day22_arrays;
 
 public class ArrayToString {
 
-    public static void main(String[] args) {
+    public static void main(String [] args) {
 
         String name = "apple";
         String [] str = name.split(""); // [a, p, p, l, e]
