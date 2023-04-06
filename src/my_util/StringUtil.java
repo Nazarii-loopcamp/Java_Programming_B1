@@ -32,6 +32,68 @@ public class StringUtil {
         String fixed = str.trim();
         fixed = str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
         return fixed;
+    }
+
+    /**
+     * This method will accept a String with multiple words
+     * And convert it to camelCase String
+     */
+    public static String camelCase (String str) { // JAVA wiLL RuLE thE WorlD
+
+        String [] arr = str.split(" ");
+        String result = "";
+        for (String each : arr) {
+
+            result += (each.charAt(0) + "").toUpperCase() + each.substring(1).toLowerCase();
+
+        }
+            return (result.charAt(0) + "").toLowerCase() + result.substring(1);
+    }
+
+    /**
+     * This method accepts String and a char
+     * And returns how many times that char exist in the String
+     */
+
+    public static int frequencyOfCharacter (String str, char ch) {
+
+        // "aabbaacca", 'a'
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ch) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    /**
+     * This method accept String
+     * And returns only unique characters as a String
+     */
+    public static String uniqueCharacters (String str) {
+
+        String checked = "";
+        String unique = "";
+
+        for (int i = 0; i < str.length(); i++) {  // aaaaabcccdeeff
+
+            if (!checked.contains(str.charAt(i)+"")) {
+
+                int count = StringUtil.frequencyOfCharacter(str, str.charAt(i));
+
+                checked += str.charAt(i);
+
+                if (count == 1) {
+                    unique += str.charAt(i);
+                }
+
+            }
+
+        }
+
+        return unique;
 
     }
+
 }
